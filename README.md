@@ -14,8 +14,8 @@ to related support unit. The classification aims to detect the related category 
 which is directly related to the department of the issue . For example an issue ticket describing
 network connection problem must be directed to the network  category/department.
 
-2. Implementation and Experimental Results
-The recommended system is implemented using previously labeled data.
+2. Implementation and Experimental Results : 
+A classification model is implemented using previously labeled data.
 
 2.1 Dataset
 
@@ -35,20 +35,20 @@ In the preparation step, purifying description of tickets from email is carried 
 
 1.Expanding Contractions
 Contractions are shortened version of words or syllables
-Examples would be, do not to don’t 
+Examples:we will convert don't to do not 
 
-2.Removing accented characters
+2.Removing accented characters : 
 Usually in any text corpus, you might be dealing with accented characters/letters, especially if you only want to analyze the English language. 
 Hence, we need to make sure that these characters are converted and standardized into ASCII characters.
 
-3.Scrube data(Removing Special Characters)
+3.Scrube data(Removing Special Characters) :
 Special characters and symbols are usually non-alphanumeric characters or even occasionally numeric characters (depending on the problem), 
 which add to the extra noise in unstructured text. Usually, simple regular expressions (regexes) can be used to remove them.
 
-4.Stemming 
+4.Stemming :
 Word stems are also known as the base form of a word.
 
-5.Lemmatization
+5.Lemmatization :
 Lemmatization is very similar to stemming, where we remove word affixes to get to the base form of a word.
 
 2.3 Feature Extraction
@@ -66,10 +66,9 @@ appears in the document, but is offset by the frequency of the term in the corpu
 
 3.Topic Modelling :
 1.Gensim :Gensim is a Python library for topic modelling, document 
-indexing and similarity retrieval with large corpora. Target audience is the natural language processing (NLP)
+indexing and similarity retrieval with large corpora. 
 
-2.We have used LdaMulticore model as it offers plenty of useful features like process Pools or process safe Queues
- that were used for the multicore LDA implementation.
+2.We have done LDA implementation and used it for topic modelling.
  
 3.pyLDAvis: 
 pyLDAvis is a interactive LDA visualization python package.
@@ -78,7 +77,9 @@ the center of circles indicate the similarity between topics. For each topic, th
 right side listed the top 30 most relevant terms.
 
 2.4 Train and Test split 
+
 2.5 Building ML and Neural Net models
+
 1.Build support vector machine classifier which has given F1-score of about 0.88
 
 Note: As we have multiclass classification problem we must use f1-score as a metric.
@@ -100,6 +101,7 @@ but overfitting is reduce compare to previous model.
 Note: In keras we don't have F1-score as default matrix so we have used accuracy as metrix.
 
 3. Conclusion
+
 This usecase  to assign tickets automatically, a model based on
 supervised machine learning algorithms is proposed. Dataset consisting of previously
 categorized tickets are used to train classification algorithms. Bag of words approach is

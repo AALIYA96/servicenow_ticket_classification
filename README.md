@@ -8,7 +8,7 @@ especially new users which have never used the system before or have doubt, usua
 In this system, bag of word approach, machine learning techniques and other algorithms which proven performance in text processing are used. 
 It reduces manual efforts and human errors while ensuring high service levels and improved end-user satisfaction
  
-1.Proposed System
+1.Proposed System : 
 The proposed system basically contains a phase classification process to assign issue ticket
 to related support unit. The classification aims to detect the related category of ticket
 which is directly related to the department of the issue . For example an issue ticket describing
@@ -37,7 +37,7 @@ In the preparation step, purifying description of tickets from email is carried 
 Contractions are shortened version of words or syllables
 Examples would be, do not to don’t 
 
-2. Removing accented characters
+2.Removing accented characters
 Usually in any text corpus, you might be dealing with accented characters/letters, especially if you only want to analyze the English language. 
 Hence, we need to make sure that these characters are converted and standardized into ASCII characters.
 
@@ -53,31 +53,31 @@ Lemmatization is very similar to stemming, where we remove word affixes to get t
 
 2.3 Feature Extraction
 
-1.Bag of word
+1.Bag of word :
 Based on bag of word approach, to convert the text data into numerical form, each term in the
 dataset is considered as an attribute which is independent of each other. A dictionary is
 constructed by using these attributes. Using the indexes of the dictionary each ticket is
 represented as a vector each element of which refers the term weighting coefficient. 
 
-2. TF-IDF
+2. TF-IDF :
 A further method which is the most frequently used is term frequency- inverse document
 frequency (tf-idf). The tf-idf value increases comparatively to the number of times a term
 appears in the document, but is offset by the frequency of the term in the corpus. 
 
-3.Topic Modelling
+3.Topic Modelling :
 1.Gensim :Gensim is a Python library for topic modelling, document 
 indexing and similarity retrieval with large corpora. Target audience is the natural language processing (NLP)
 
 2.We have used LdaMulticore model as it offers plenty of useful features like process Pools or process safe Queues
  that were used for the multicore LDA implementation.
  
-3.pyLDAvis
+3.pyLDAvis: 
 pyLDAvis is a interactive LDA visualization python package.
 The area of circle represents the importance of each topic over the entire corpus, the distance between 
 the center of circles indicate the similarity between topics. For each topic, the histogram on the 
 right side listed the top 30 most relevant terms.
 
-2.4 Train and Test split.
+2.4 Train and Test split 
 2.5 Building ML and Neural Net models
 1.Build support vector machine classifier which has given F1-score of about 0.88
 
@@ -106,7 +106,7 @@ categorized tickets are used to train classification algorithms. Bag of words ap
 utilized to extract features vectors. Morphological analysis of terms is performed to avoid
 data sparseness problem and decrease the vector size for this TFIDF is used.
 we have implemented Ml model like support vector machine,RandomForestClassifier,AdaBoostClassifier and
- Neural Net with LSTM .
+Neural Net with LSTM .
  
 4.Future Work
 
